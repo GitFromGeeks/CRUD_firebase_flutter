@@ -1,0 +1,43 @@
+import 'package:crud_firebase_flutter/screens/login_screen.dart';
+import 'package:flutter/material.dart';
+import '../res/custom_colors.dart';
+
+class AppBarTitle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => LoginScreen(),
+          ),
+        );
+      },
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'assets/firebase_logo.png',
+            height: 20,
+          ),
+          SizedBox(width: 8),
+          Text(
+            'FlutterFire',
+            style: TextStyle(
+              color: CustomColors.firebaseYellow,
+              fontSize: 18,
+            ),
+          ),
+          Text(
+            ' CRUD',
+            style: TextStyle(
+              color: CustomColors.firebaseOrange,
+              fontSize: 18,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
