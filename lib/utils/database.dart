@@ -6,6 +6,7 @@ final CollectionReference _mainCollection = _firestore.collection('notes');
 class Database {
   static String? userUid;
 
+// ADD ITEM
   static Future<void> addItem({
     required String title,
     required String description,
@@ -24,6 +25,7 @@ class Database {
         .catchError((e) => print(e));
   }
 
+// UPDATE ITEM
   static Future<void> updateItem({
     required String title,
     required String description,
@@ -43,12 +45,15 @@ class Database {
         .catchError((e) => print(e));
   }
 
+// READ ITEM
   static Stream<QuerySnapshot> readItems() {
     CollectionReference notesItemCollection =
         _mainCollection.doc(userUid).collection('items');
 
     return notesItemCollection.snapshots();
   }
+
+// DELETE ITEM
 
   static Future<void> deleteItem({
     required String docId,

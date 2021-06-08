@@ -10,9 +10,9 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  final FocusNode _nameFocusNode = FocusNode();
-  final FocusNode _emailFocusNode = FocusNode();
-  final FocusNode _passwordFocusNode = FocusNode();
+  // final FocusNode _nameFocusNode = FocusNode();
+  // final FocusNode _emailFocusNode = FocusNode();
+  // final FocusNode _passwordFocusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {

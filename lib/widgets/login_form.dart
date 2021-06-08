@@ -70,7 +70,6 @@ class _LoginFormState extends State<LoginForm> {
 
                   if (_loginInFormKey.currentState!.validate()) {
                     Database.userUid = _uidController.text;
-
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
                         builder: (context) => DashboardScreen(),

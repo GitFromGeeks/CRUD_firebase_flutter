@@ -3,7 +3,6 @@ class Validator {
     if (value.isEmpty) {
       return 'Field can\'t be empty';
     }
-
     return null;
   }
 
@@ -13,7 +12,6 @@ class Validator {
     } else if (uid.length <= 3) {
       return 'User ID should be greater than 3 characters';
     }
-
     return null;
   }
 }
